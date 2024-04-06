@@ -122,7 +122,7 @@ pkg install yarn
 
 pkg install imagemagick -y
 
-git clone https://github.com/Brashokish/Kish-Md
+git clone https://github.com/Brashokish/Kish-MD
 
 cd Kish-Md
 
