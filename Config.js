@@ -2,21 +2,21 @@ const fs = require('fs')
 const chalk = require('chalk')
 
 //contact details
-global.ownernumber = ['254789072122']
-global.ownername = "𝙆𝙞𝙨𝙝𓅃"//owner name
-global.ytname = "YT: Kish Md"
-global.socialm = "GitHub: Brashokish"
+global.ownernumber = ['254700437079']
+global.ownername = "A thug𓅃"//owner name
+global.ytname = "YT: Thug Md"
+global.socialm = "GitHub: victorthug"
 global.location = "Kenyan"
 
-global.botname = '𝑲𝑰𝑺𝑯-𝐌𝐃' //name of the bot
+global.botname = 'thug-𝐌𝐃' //name of the bot
 
 //sticker details
-global.stickername = '𝙆𝙞𝙨𝙝𓅃'
+global.stickername = 'thug𓅃'
 global.packname = 'Sticker By'
-global.author = 'Kish Bot'
+global.author = 'thug Bot'
 //console view/theme
 global.themeemoji = '🧩'
-global.wm = "Kish botz inc."
+global.wm = "thug botz inc."
 
 //theme link
 global.link = 'https://chat.whatsapp.com/LhBwWwQAS4y93XOsCKpxdv'
@@ -39,7 +39,7 @@ global.always_online = true // always online
 
 //reply messages
 global.mess = {
-    done: '*here you go!* \n\n*𓅃 Kish Md 𓅃*\n\n*🧩 Bot link:* \nhttps://github.com/Brashokish/Kish-MD\n',
+    done: '*here you go!* \n\n*𓅃 thug Md 𓅃*\n\n*🧩 Bot link:* \nhttps://github.com/victorthug/Kish-MD\n',
     prem: '*This feature can be used by premium user only*',
     admin: '*This feature can be used by admin only*',
     botAdmin: '*This feature can only be used when the bot is a group admin* ',
