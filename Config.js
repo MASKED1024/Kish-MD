@@ -33,6 +33,8 @@ global.autoread = false //auto read messages
 global.autobio = false //auto update bio
 global.anti212 = true //auto block +212
 global.autoread_status = true //auto view status/story
+global.alwaysonline = true //always online
+
 
 
 
