@@ -2,24 +2,24 @@ const fs = require('fs')
 const chalk = require('chalk')
 
 //contact details
-global.ownernumber = ['254789072122']
-global.ownername = "𝙆𝙞𝙨𝙝𓅃"//owner name
-global.ytname = "YT: Kish Md"
-global.socialm = "GitHub: Brashokish"
-global.location = "Kenyan"
+global.ownernumber = ['13473216663']
+global.ownername = "KISH"//owner name
+global.ytname = "YT: KishBotz.inc"
+global.socialm = "GitHub: KISH-MD"
+global.location = "Kenya"
 
-global.botname = '𝑲𝑰𝑺𝑯-𝐌𝐃' //name of the bot
+global.botname = 'KISH-MD' //name of the bot
 
 //sticker details
-global.stickername = '𝙆𝙞𝙨𝙝𓅃'
+global.stickername = 'KISH-MD'
 global.packname = 'Sticker By'
 global.author = 'Kish Bot'
 //console view/theme
-global.themeemoji = '🧩'
+global.themeemoji = '𓅃'
 global.wm = "Kish botz inc."
 
 //theme link
-global.link = 'https://chat.whatsapp.com/LhBwWwQAS4y93XOsCKpxdv'
+//global.link = 'https://chat.whatsapp.com/LhBwWwQAS4y93XOsCKpxdv'
 
 //custom prefix
 global.prefa = ['.']
@@ -27,18 +27,20 @@ global.prefa = ['.']
 //false=disable and true=enable
 global.welcome = false //auto welcome
 global.autoRecording = false //auto recording
-global.autoTyping = false //auto typing
+global.autoTyping = true //auto typing
 global.autorecordtype = false //auto typing + recording
 global.autoread = false //auto read messages
 global.autobio = false //auto update bio
 global.anti212 = true //auto block +212
-global.autoread_status = false //auto view status/story
+global.autoread_status = true //auto view status/story
+global.alwaysonline = true //always online
+
 
 
 
 //reply messages
 global.mess = {
-    done: '*here you go!* \n\n*𓅃 Kish Md 𓅃*\n\n*🧩 Bot link:* \nhttps://github.com/Brashokish/Kish-MD\n',
+    done: '*here you go!* \n\n*🎀 Kish Bot 🎀*\n\n*🧩 Bot link:* \nhttps://github.com/Brashokish/Kish-MD\n',
     prem: '*This feature can be used by premium user only*',
     admin: '*This feature can be used by admin only*',
     botAdmin: '*This feature can only be used when the bot is a group admin* ',
