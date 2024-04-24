@@ -51,6 +51,14 @@ global.mess = {
     error: '*Error!*',
 }
 
+module.exports = {
+ownernumber: global.ownernumber,
+ownername: global.ownername,
+ANTI_BOT:"true",
+}
+
+
+        }
 global.thumb = fs.readFileSync('./Gallery/thumb.jpg')
 
 let file = require.resolve(__filename)
