@@ -37,7 +37,7 @@ exec('rm -r ' + sessionPath);
 exec('mkdir ' + sessionFolderPath)
 let code = Config.sessionId.replace(/KISH-MD;;;=>/g, "");
 let code2 = Buffer.from(code, "base64").toString("utf-8")
-//let id = code2.replace(/KISH-BOT;;;=>/g,"");
+let id = code2.replace(/KISH-MD;;;=>/g,"");
 let id2 = Buffer.from(id, "base64").toString("utf-8")
 if (!fs.existsSync(sessionPath)) {
     if(id2.length<30){
