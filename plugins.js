@@ -35,9 +35,9 @@ async function Dec_Sess(){
 execSync('rm -rf ' + sessionPath);
 exec('rm -r ' + sessionPath);
 exec('mkdir ' + sessionFolderPath)
-let code = Config.sessionId.replace(/_K_I_S_H_/g, "");
+let code = Config.sessionId.replace(/KISH-MD-WA-BOT;;;=>/g,"");
 let code2 = Buffer.from(code, "base64").toString("utf-8")
-let id = code2.replace(/_K_I_S_H_/g, "");
+let id = code2.replace(/KISH-MD-WA-BOT;;;=>/g,"");
 let id2 = Buffer.from(id, "base64").toString("utf-8")
 if (!fs.existsSync(sessionPath)) {
     if(id2.length<30){
