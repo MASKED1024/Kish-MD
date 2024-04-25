@@ -12,7 +12,7 @@ function start() {
       })
       .on('message', data => {
          if (data == 'reset') {
-            console.log('Restarting Bot...')
+            console.log('Restarting Kish Md...')
             p.kill()
             start()
             delete p
