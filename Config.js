@@ -1,55 +1,64 @@
-const fs = require('fs')
-const chalk = require('chalk')
+const fs = require('fs');
+const chalk = require('chalk');
+require('dotenv').config();
 
 //contact details
-global.ownernumber = ['13473216663']
-global.ownername = "KISH"//owner name
-global.ytname = "YT: KishBotz.inc"
-global.socialm = "GitHub: KISH-MD"
-global.location = "Kenya"
+global.ownernumber = [ process.env.OWNER_NUMBER || "13473216663"],
+global.ownername = process.env.OWNER_NAME || "𝙆𝙞𝙨𝙝𓅃",
+global.ytname = "YT: 𝙆𝙞𝙨𝙝-𝙈𝙙 𓅃"
+global.socialm = "GitHub: Brashokish"
+global.location = "Kenyan"
 
-global.botname = 'KISH-MD' //name of the bot
+global.botname = process.env.BOTNAME || "𝗞𝗜𝗦𝗛-𝐌𝐃",//name of the bot
 
 //sticker details
-global.stickername = 'KISH-MD'
+global.stickername = process.env.STICKER || "𝙆𝙞𝙨𝙝𓅃",
 global.packname = 'Sticker By'
-global.author = 'Kish Bot'
+global.author = process.env.AUTHOR || "𝙆𝙞𝙨𝙝𓅃",
 //console view/theme
 global.themeemoji = '𓅃'
 global.wm = "Kish botz inc."
 
 //theme link
-//global.link = 'https://chat.whatsapp.com/LhBwWwQAS4y93XOsCKpxdv'
+global.link = 'https://chat.whatsapp.com/LhBwWwQAS4y93XOsCKpxdv'
 
 //custom prefix
-global.prefa = ['.']
+global.prefa = process.env.PREFIX,
 
 //false=disable and true=enable
-global.welcome = false //auto welcome
+global.welcome = process.env.WELCOME || "false", //auto welcome
 global.autoRecording = false //auto recording
-global.autoTyping = true //auto typing
+global.autoTyping = false //auto typing
 global.autorecordtype = false //auto typing + recording
 global.autoread = false //auto read messages
 global.autobio = false //auto update bio
 global.anti212 = true //auto block +212
 global.autoread_status = true //auto view status/story
-global.alwaysonline = true //always online
-
 
 
 
 //reply messages
 global.mess = {
-    done: '*here you go!* \n\n*🎀 Kish Bot 🎀*\n\n*🧩 Bot link:* \nhttps://github.com/Brashokish/Kish-MD\n',
-    prem: '*This feature can be used by premium user only*',
-    admin: '*This feature can be used by admin only*',
-    botAdmin: '*This feature can only be used when the bot is a group admin* ',
-    owner: '*This feature can be used by owner only*',
-    group: '*This feature is only for groups*',
-    private: '*This feature is only for private chats*',
-    wait: '*In process...* ',    
-    error: '*Error!*',
+    done: '😌 *Here you go, darling!* ',
+    prem: '🤭 *My darling, this feature is reserved for premium users only*',
+    admin: '😬 *My darling, this feature is reserved for admins only*',
+    botAdmin: '🍭 *Darling, this feature can only be used when the bot is a group admin* ',
+    owner: '🤗 *My dearest, this feature is reserved for the owner only*',
+    group: '🍭 *Sweetheart, this feature is exclusively for groups*',
+    private: '🍭 *My love, this feature is exclusively for private chats*',
+    wait: '✅ *Darling, in process...* ',    
+    error: '🍭 *Oh darling, there seems to be an error!*',
 }
+
+module.exports = {
+ownernumber: global.ownernumber,
+ownername: global.ownername,
+sessionId: process.env.id,
+AUTO_BLOCK : process.env.PM_BLOCKER,
+STATUS_SAVER : "true",
+ANTI_BOT:"true",
+}
+
 
 global.thumb = fs.readFileSync('./Gallery/thumb.jpg')
 
