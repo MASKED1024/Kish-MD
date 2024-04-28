@@ -158,16 +158,38 @@ function printRainbowMessage() {
 printRainbowMessage();
 }
     
-        
-                if (
-            connection === "close" &&
-            lastDisconnect &&
-            lastDisconnect.error &&
-            lastDisconnect.error.output.statusCode != 401
-        ) {
-            startKish()
+        else if (connection == "close") {
+        let disconnectReason = new boom_1.Boom(lastDisconnect?.error)?.output.statusCode;
+        if (disconnectReason === pk.DisconnectReason.badSession) {
+            console.log('Incorrect session id, You might wanna pair again...');
         }
-    })
+        else if (disconnectReason === pk.DisconnectReason.connectionClosed) {
+            console.log('Connection closed, reconnecting...');
+            startDreaded();
+        }
+        else if (disconnectReason === pk.DisconnectReason.connectionLost) {
+            console.log('Connection to the server lost, trying to connect...');
+            startDreaded();
+        }
+        else if (disconnectReason === pk.DisconnectReason?.connectionReplaced) {
+            console.log('Connection replaced, another session is already open, close it...');
+        }
+        else if (disconnectReason === pk.DisconnectReason.loggedOut) {
+            console.log('You are logged out.');
+        }
+        else if (disconnectReason === pk.DisconnectReason.restartRequired) {
+            console.log('Restarting...');
+            startDreaded();
+        }
+        else {
+            console.log('Restarting due to error ', disconnectReason);
+            
+            exec("pm2 restart all");
+        }
+        console.log("Bot is" + connection);
+      startKish();
+    }
+});
     Kish.ev.on('creds.update', saveCreds)
     Kish.ev.on("messages.upsert",  () => { })
 
